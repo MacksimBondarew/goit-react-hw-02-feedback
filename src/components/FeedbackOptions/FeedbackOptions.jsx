@@ -19,7 +19,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.prototype = {
-    options: ProtoTypes.object.isRequired,
+    options: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
     onLeaveFeedback: ProtoTypes.func.isRequired,
 };
 

@@ -3,7 +3,6 @@ import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Section from './Section';
 import Notification from './Notification';
-import { StaticsTitle } from './App.styled'
 class App extends Component {
     state = {
         good: 0,
@@ -35,7 +34,8 @@ class App extends Component {
                         options={Object.keys(this.state)}
                         onLeaveFeedback={this.onLeaveFeedback}
                     />
-                    <StaticsTitle>Statictics</StaticsTitle>
+                </Section>
+                <Section title="Statistics">
                     {this.countTotalFeedback() > 0 ? (
                         <Statistics
                             good={good}
